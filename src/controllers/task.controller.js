@@ -1,6 +1,6 @@
 import { pool } from "../config/db.js";
 
-// CREATE TASK
+
 export const createTask = async (req, res) => {
   try {
     const { title, description, priority, status } = req.body;
@@ -24,8 +24,6 @@ export const createTask = async (req, res) => {
   }
 };
 
-
-// GET ALL TASKS (With Filtering + Sorting + Pagination)
 export const getTasks = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -68,8 +66,6 @@ export const getTasks = async (req, res) => {
   }
 };
 
-
-// GET TASK BY ID
 export const getTaskById = async (req, res) => {
   try {
     const taskId = req.params.id;
@@ -90,8 +86,6 @@ export const getTaskById = async (req, res) => {
   }
 };
 
-
-// UPDATE TASK
 export const updateTask = async (req, res) => {
   try {
     const taskId = req.params.id;
@@ -121,8 +115,6 @@ export const updateTask = async (req, res) => {
   }
 };
 
-
-// DELETE TASK
 export const deleteTask = async (req, res) => {
   try {
     const taskId = req.params.id;

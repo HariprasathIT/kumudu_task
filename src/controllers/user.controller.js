@@ -2,7 +2,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { pool } from "../config/db.js";
 
-// REGISTER USER
+
 export const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -43,7 +43,7 @@ export const registerUser = async (req, res) => {
 };
 
 
-// LOGIN USER
+
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;

@@ -4,10 +4,8 @@ import { validateRegister, validateLogin } from "../middleware/user.validation.j
 
 const router = express.Router();
 
-// REGISTER
 router.post("/register", validateRegister, registerUser);
 
-// LOGIN
 router.post("/login", validateLogin, loginUser);
 
 export default router;

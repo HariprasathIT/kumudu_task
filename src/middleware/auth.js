@@ -11,11 +11,11 @@ export const auth = (req, res, next) => {
       });
     }
 
-    const token = header.split(" ")[1]; // Extract token
+    const token = header.split(" ")[1];
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    req.user = { id: decoded.id }; // add user ID to request
+    req.user = { id: decoded.id };
 
     next();
 

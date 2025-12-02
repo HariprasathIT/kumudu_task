@@ -10,7 +10,6 @@ import {
 
 const router = express.Router();
 
-// Protected routes
 router.post("/addtask", auth, createTask);
 router.get("/gettask", auth, getTasks);
 router.get("/getsingletask/:id", auth, getTaskById);
